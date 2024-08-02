@@ -19,16 +19,16 @@ class MynteyeRectification(Node):
         super().__init__('mynteye_rectification')
 
         self.declare_parameters(namespace='',
-                                parameters=[('qos_length', int()),
-                                            ('camera_info.left.D', [float(), float()]),
-                                            ('camera_info.left.K', [float(), float()]),
-                                            ('camera_info.left.R', [float(), float()]),
-                                            ('camera_info.left.P', [float(), float()]),
-                                            ('camera_info.right.D', [float(), float()]),
-                                            ('camera_info.right.K', [float(), float()]),
-                                            ('camera_info.right.R', [float(), float()]),
-                                            ('camera_info.right.P', [float(), float()]),
-                                            ('on_display', False)])
+                                parameters=[('qos_length', None),
+                                            ('camera_info.left.D', None),
+                                            ('camera_info.left.K', None),
+                                            ('camera_info.left.R', None),
+                                            ('camera_info.left.P', None),
+                                            ('camera_info.right.D', None),
+                                            ('camera_info.right.K', None),
+                                            ('camera_info.right.R', None),
+                                            ('camera_info.right.P', None),
+                                            ('on_display', None)])
 
         qos_length = self.get_parameter('qos_length').get_parameter_value().integer_value
         qos_profile = QoSProfile(depth=qos_length,

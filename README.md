@@ -54,6 +54,7 @@ This Repository contains ROS2 wrapper for MYNT EYE stereo camera.
 
 ```bash
 sudo apt-get install ros-iron-camera-info-manager ros-iron-launch-testing-ament-cmake
+mkdir dev_ws
 cd dev_ws
 mkdir src
 cd src
