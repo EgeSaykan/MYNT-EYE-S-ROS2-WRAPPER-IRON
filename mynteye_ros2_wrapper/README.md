@@ -43,7 +43,7 @@ This Repository contains ROS2 wrapper for MYNT EYE stereo camera.
 
     ```bash
     sudo apt-get install build-essential cmake git
-    git clone https://github.com/EgeSaykan/MYNT-EYE-S-SDK.git
+    git clone https://github.com/slightech/MYNT-EYE-S-SDK.git
     cd MYNT-EYE-S-SDK
     make init
     make install
@@ -54,13 +54,14 @@ This Repository contains ROS2 wrapper for MYNT EYE stereo camera.
 
 ```bash
 sudo apt-get install ros-iron-camera-info-manager ros-iron-launch-testing-ament-cmake
+mkdir dev_ws
 cd dev_ws
 mkdir src
 cd src
-git clone https://github.com/EgeSaykan/MYNT-EYE-S-ROS2-WRAPPER-IRON.git
+git clone https://github.com/harsha-vk/mynteye_ros2_wrapper
 git clone https://github.com/ros-perception/image_pipeline.git
 cd image_pipeline
-git checkout iron
+git checkout dashing
 cd ../../
 colcon build
 ```
@@ -86,8 +87,3 @@ export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/usr/local/lib
 . install/setup.bash
 ros2 launch mynteye_ros2_wrapper mynteye_calib.launch.py
 ```
-
-## Changes
-
-This wrapper was modified from Harsha [Vardhan Koganti's wrapper](https://github.com/harsha-vk/mynteye_ros2_wrapper/tree/main).<br>
-The original versoin does not support Ubuntu 22.04 or Ros2 Iron. This clone is updated to work on modern systems.
