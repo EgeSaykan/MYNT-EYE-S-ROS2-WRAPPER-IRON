@@ -19,12 +19,12 @@ class MynteyeCalibration(Node):
 
         # Declare ROS parameters
         self.declare_parameters(namespace='',
-                               parameters=[('qos_length', None),
-                                           ('to_calibrate', None),
-                                           ('corners_x', None),
-                                           ('corners_y', None),
-                                           ('samples_count', None),
-                                           ('window_size',None)])
+                               parameters=[('qos_length', int()),
+                                           ('to_calibrate', str()),
+                                           ('corners_x', int()),
+                                           ('corners_y', int()),
+                                           ('samples_count', int()),
+                                           ('window_size',int())])
 
         qos_length = self.get_parameter('qos_length').get_parameter_value().integer_value
         qos_profile = QoSProfile(depth=qos_length,
